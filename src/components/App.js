@@ -19,8 +19,12 @@ class App extends Component {
               <section className="side col-lg-3">
               <h4 className="heading">Sell your product</h4>
         
-              <hr className="w-25 bg-danger"/>
+              <hr />
               <NewProductForm/>
+
+              <aside className="cart">
+                <h2>Cart</h2>
+              </aside>
             </section>
             <section className="content col-lg-9">
               <h4 className="display-4 mb-4">Featured</h4>

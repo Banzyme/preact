@@ -34,22 +34,44 @@ nav>span{
 hr{
   position: absolute;
   left: 5;
+  width: 10%;
+  background-color: #D500F9;
+}
+
+.cart{
+  margin-top: 2em;
+  border: 1px solid rgba(3, 3,3, 0.1);
+  padding: 0.2em;
+  background: whitesmoke;
 }
 
 /*
 3. Main csontent styles
 */
+.list-container{
+  list-style-type: none;
+}
 
+.list-item:hover{
+  background: #D500F9;
+  color: white !important;
+}
+
+.list-item{
+  border: 1px solid rgba(3, 3,3, 0.3);
+  border-radius: 1em;
+  margin-bottom: 1em;
+  transition: all 700ms ease-out;
+}
 
 /*
 4. Footer
 */
 .footer{
-  position: absolute;
-  bottom: 0;
   text-align: center;
   width: 100%;
   font-size: 0.8em;
+  margin-top: 50px;
 }
 
 /*

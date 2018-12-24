@@ -1,0 +1,65 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+
+/*
+1. Navigation styles
+*/
+.navbar{
+  width: 100%;
+  background-color: purple;
+}
+
+nav>span{
+  color: white !important;
+}
+
+/*
+2. Aside styles
+*/
+.newProductForm{
+  margin-top: 2.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.newProductForm>button{
+  width: 100%;
+  border-radius: 2em;
+}
+
+.newProductForm>.row{
+  margin-bottom: 1em;
+}
+
+hr{
+  position: absolute;
+  left: 5;
+}
+
+/*
+3. Main csontent styles
+*/
+
+
+/*
+4. Footer
+*/
+.footer{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 0.8em;
+}
+
+/*
+Animations
+*/
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

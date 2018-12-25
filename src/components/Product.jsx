@@ -1,13 +1,11 @@
 import React from 'react';
-import { useState } from 'react';
 
 class Product extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             impressions: 0
         }
-        // todo
     }
 
     handleHover = () => {
@@ -16,16 +14,15 @@ class Product extends React.Component{
         })
     }
 
-    handleClick = () => {
-        this.props.onclick(this.props.id);
+    componentDidMount(){
+        console.log("Product props: ", this.props.title)
     }
 
     render(){
         const data = this.props; 
-        console.log("Prouct props: ", data)
 
         return (
-            <article className="container" onMouseOut={this.handleHover} onClick={this.handleClick}>
+            <article className="container" onMouseOut={this.handleHover} onClick={ () => this.props.onclick(this.props.id) }>
                 <section className="row" style={{ color: this.props.hidden ? '#9E9E9E' : 'initial' }}>
                     <div className="col-md-9">
                         <h4> {this.props.title} </h4>

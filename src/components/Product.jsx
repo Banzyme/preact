@@ -19,16 +19,17 @@ class Product extends React.Component{
     }
 
     render(){
-        const data = this.props; 
 
         return (
             <article className="container" onMouseOut={this.handleHover} onClick={ () => this.props.onclick(this.props.id) }>
                 <section className="row" style={{ color: this.props.hidden ? '#9E9E9E' : 'initial' }}>
                     <div className="col-md-9">
                         <h4> {this.props.title} </h4>
-                        <span className="text-sm">{this.props.owner}, <a>{this.props.location}</a></span>
+                        <span className="text-sm">{this.props.owner}, <a href="https://www.google.com/">{this.props.location}</a></span>
+                        
+                        <div className="mx-auto w-75 small-content-divider my-4"><hr/></div>
                         <br/>
-                        <p className="w-100 text-center">viewed <b>{this.state.impressions}</b> times</p>
+                        <p className="w-100 text-center"> <small>viewed <b>{this.state.impressions}</b> times</small></p>
                     </div>
     
                     <div className="col-md-3">

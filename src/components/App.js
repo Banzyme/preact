@@ -27,7 +27,7 @@ class App extends Component {
               </aside>
             </section>
             <section className="content col-lg-9">
-              <h4 className="display-4 mb-4">Featured</h4>
+              <h4 className="display-4 mb-4 ml-5">Featured</h4>
               
               <ProductList/>
             </section>

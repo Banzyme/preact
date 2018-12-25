@@ -1,39 +1,37 @@
 import React from 'react';
 import Product from './Product';
+import { seed } from '../seed';
 
-const products = [
-    {
-        id: 1,
-        owner: "Bob",
-        title: 'Selling my couch',
-        price: 5421,
-        hidden: false,
-        location: 'Middelburg Nasaret'
-    },
-    {
-        id: 11,
-        owner: "Ndamulelo",
-        price: 3900,
-        title: 'Selling my Apple iPhone 7s',
-        hidden: false,
-        location: 'Pretoria Sunnyside'
-    }
-]
+const products = seed;
+const handleClick = (id) => {
+    alert("Item: " + id + " added to cart.");
+}
 
-const items = products.map( (item) => {
-    return <li  className="list-item shadow-md" key="item.id"> <Product owner={item.owner} title={item.title} hidden={item.hidden} price={item.price} location={item.location} /> </li>
+const items = products.map((item) => {
+    return <li className="list-item shadow-md" key="item.id">
+        <Product
+            id={item.id}
+            owner={item.owner}
+            title={item.title}
+            hidden={item.hidden}
+            price={item.price}
+            location={item.location} 
+            onclick = {handleClick}
+            />
+    </li>
 });
 
 const ProductList = () => {
-    return(
+
+    return (
         <article className="productList">
             <section id="items-container">
-            <ul className="list-container">
-            {items}
-            </ul>
+                <ul className="list-container">
+                    {items}
+                </ul>
             </section>
         </article>
-        )
+    )
 }
 
 export default ProductList;

@@ -26,7 +26,7 @@ class Product extends React.Component{
 
         return (
             <article className="container" onMouseOut={this.handleHover} onClick={this.handleClick}>
-                <section className="row" style={{ color: this.props.hidden ? '#616161' : 'initial' }}>
+                <section className="row" style={{ color: this.props.hidden ? '#9E9E9E' : 'initial' }}>
                     <div className="col-md-9">
                         <h4> {this.props.title} </h4>
                         <span className="text-sm">{this.props.owner}, <a>{this.props.location}</a></span>

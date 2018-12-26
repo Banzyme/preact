@@ -8,7 +8,9 @@ class NewProductForm extends Component{
     title: '',
     price: '',
     hidden: false,
-    location: 'Jhb, SA'
+    location: 'Jhb, SA',
+    impressions: 0,
+    imgPath: '../../assets/img/iphone.jpg'
   }
 
   saveNewProduct = (e) =>{

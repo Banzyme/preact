@@ -20,7 +20,7 @@ class ProductList extends Component {
                         return <li className="list-item shadow-md" key={item.id}>
                             <Product
                                 {...item}
-                                onclick={this.handleClick}
+                                onclick={ this.handleClick }
                             />
                         </li>
                     })

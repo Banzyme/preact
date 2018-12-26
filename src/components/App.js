@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { seed } from '../seed';
 
-import NavBar from './NavBar';
-import NewProductForm from './NewProductForm';
-import CartList from './CartList'
+import NavBar from './Nav/NavBar';
+import NewProductForm from './Forms/NewProductForm';
+import CartList from './Cart/CartList'
 import ProductList from './Product/ProductList';
-import Footer from './Footer';
+import Footer from './Footer/Footer';
 // styles
 import './App.css';
 
@@ -29,13 +29,14 @@ class App extends Component {
   }
 
 
-      // event handlers
+  // event handlers
   handleClick = (id) => {
-        // toggle hidden state when clicked
+    // toggle hidden state when clicked
     const newState = this.state.products.map(product => {
       if (product.id === id) {
         return Object.assign({}, product, {
-          hidden: !product.hidden
+          hidden: !product.hidden,
+          impressions: product.impressions + 1
         })
       } else {
         return product;
@@ -45,9 +46,7 @@ class App extends Component {
     this.setState({
       products: newState
     })
-
-    // Todo: Add to cart
-      }
+  }
 
   render() {
     return (
@@ -64,12 +63,12 @@ class App extends Component {
               <hr />
               <NewProductForm onAddProduct={this.addNewProduct}/>
 
-              <aside className="cart rounded shadow-lg">
-                <h2 className="p-2">Cart</h2>
+              <div className="rounded shadow-lg">
                 <CartList 
-                products={ this.state.products.filter( (product)=> product.hidden === true ) }
+                products={ this.state.products.filter( (product)=> 
+                  product.hidden === true ) }
                 />
-              </aside>
+              </div>
             </section>
             <section className="content col-lg-9">
               <h4 className="display-4 mb-2 ml-5">Featured</h4>

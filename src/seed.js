@@ -5,7 +5,9 @@ export const seed =  [
         title: 'Selling my couch',
         price: 5421,
         hidden: true,
-        location: 'Middelburg Nasaret'
+        location: 'Middelburg Nasaret',
+        impressions: 0,
+        imgPath: '../../assets/img/iphone.jpg'
     },
     {
         id: 11,
@@ -13,6 +15,8 @@ export const seed =  [
         price: 3900,
         title: 'Selling my Apple iPhone 7s',
         hidden: false,
-        location: 'Pretoria Sunnyside'
+        location: 'Pretoria Sunnyside',
+        impressions: 0,
+        imgPath: '../../assets/img/iphone.jpg'
     }
 ]

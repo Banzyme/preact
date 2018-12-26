@@ -1,8 +1,9 @@
 import React from 'react';
 import './Product.css';
+import PropTypes from 'prop-types';
 
 function Product(props){
-
+    
     return (
         <article className="container">
             <section className="row" style={{ color: props.hidden ? '#9E9E9E' : 'initial' }}>
@@ -10,7 +11,7 @@ function Product(props){
                     <div className="row">
                     <div className="col-md-4" id="product-img">
                     
-                        <img src={require('../../assets/img/iphone.jpg')} class="rounded float-left" alt="item" />
+                        <img src={props.imgPath} class="rounded float-left" alt="item" />
                     </div>
                     <div className="col-md-8" id="product-details">
                         <h4> {props.title} </h4>
@@ -28,7 +29,7 @@ function Product(props){
                         <br />
                         <p className="w-100 text-center"> 
     
-                        <i class="far fa-eye"></i><sup><b></b></sup>
+                        <i class="far fa-eye"></i><sup><b> {props.impressions} </b></sup>
                         <i class="ml-4 far fa-heart"></i><sup><b>0</b></sup>
                         </p>
                     </div>
@@ -39,11 +40,26 @@ function Product(props){
                 <div className="col-md-3">
                     <h6 className="price-heading"><small>R</small>{props.price}<sup>00</sup></h6>
 
-                    <button className="btn btn-primary" onClick={() => props.onclick(props.id) }>Add to cart</button>
+                    <button className={props.hidden?"btn btn-danger": "btn btn-primary"} onClick={() => props.onclick(props.id) }>
+                        { props.hidden? 'Remove': 'Add to cart' }
+                    </button>
                 </div>
             </section>
         </article>
     )
 }
+
+Product.PropTypes = {
+    id: PropTypes.number.isRequired,
+    owner: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    hidden: PropTypes.bool.isRequired,
+    location: PropTypes.string.isRequired,
+    impressions: PropTypes.number.isRequired,
+    imgPath: PropTypes.string.isRequired,
+    onclick: PropTypes.func.isRequired
+  };
+
 
 export default Product;

@@ -1,99 +1,80 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
-
 /*
 1. Navigation styles
 */
-.navbar{
-  width: 100%;
-  background-color: purple;
+
+.navbar {
+    width: 100%;
+    background-color: purple;
 }
 
-nav>span{
-  color: white !important;
+nav>span {
+    color: white !important;
 }
 
 /*
 2. Aside styles
 */
-.newProductForm{
-  margin-top: 2.5em;
-  padding-left: 1em;
-  padding-right: 1em;
+
+.newProductForm {
+    margin-top: 2.5em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
-.newProductForm>button{
-  width: 100%;
-  border-radius: 2em;
+.newProductForm>button {
+    width: 100%;
+    border-radius: 2em;
 }
 
-.newProductForm>.row{
-  margin-bottom: 1em;
+.newProductForm>.row {
+    margin-bottom: 1em;
 }
 
-hr{
-  position: absolute;
-  left: 5;
-  width: 10%;
-  background-color: #D500F9;
+hr {
+    position: absolute;
+    left: 5;
+    width: 10%;
+    background-color: #D500F9;
 }
 
-.cart{
-  margin-top: 2em;
-  border: 1px solid rgba(3, 3,3, 0.1);
-  max-height: 500px;
-  overflow: scroll;
-  padding: 0.8em;
-  background: whitesmoke;
+.cart {
+    margin-top: 2em;
+    border: 1px solid rgba(3, 3, 3, 0.1);
+    max-height: 500px;
+    overflow: scroll;
+    padding: 0.8em;
+    background: whitesmoke;
 }
 
 /*
 3. Main csontent styles
 */
-.container-fluid{
-  min-height: 100vh;
+
+.container-fluid {
+    min-height: 100vh;
 }
 
-.list-container{
-  list-style-type: none;
-}
-
-.list-item:hover{
-  border: 2px solid purple;
-  color: white !important;
-}
-
-.list-item{
-  border: 1px solid rgba(3, 3,3, 0.3);
-  border-radius: 1em;
-  margin-bottom: 1em;
-  margin-right: 2em;
-  transition: all 50ms ease-in;
-}
-
-.productList{
-  max-height: 100vh;
-  overflow: auto;
-}
 /*
 4. Footer
 */
-.footer{
-  text-align: center;
-  width: 100%;
-  text-align: center;
-  font-size: 0.8em;
-  margin-top: 1em;
+
+.footer {
+    text-align: center;
+    width: 100%;
+    font-size: 0.8em;
+    margin-top: 1em;
 }
 
 /*
 Animations
 */
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+@keyframes full-circle-rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

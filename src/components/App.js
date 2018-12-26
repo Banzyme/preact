@@ -4,7 +4,7 @@ import { seed } from '../seed';
 import NavBar from './NavBar';
 import NewProductForm from './NewProductForm';
 import CartList from './CartList'
-import ProductList from './ProductList';
+import ProductList from './Product/ProductList';
 import Footer from './Footer';
 // styles
 import './App.css';
@@ -72,7 +72,7 @@ class App extends Component {
               </aside>
             </section>
             <section className="content col-lg-9">
-              <h4 className="display-4 mb-4 ml-5">Featured</h4>
+              <h4 className="display-4 mb-2 ml-5">Featured</h4>
               
               <ProductList onclick={this.handleClick} products={this.state}/>
             </section>

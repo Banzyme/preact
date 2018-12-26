@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Product from './Product/Product';
+import Product from './Product';
+import './Product.css'
 
 class ProductList extends Component {
 
@@ -18,12 +19,7 @@ class ProductList extends Component {
                     this.props.products.products.map((item) => {
                         return <li className="list-item shadow-md" key={item.id}>
                             <Product
-                                id={item.id}
-                                owner={item.owner}
-                                title={item.title}
-                                hidden={item.hidden}
-                                price={item.price}
-                                location={item.location}
+                                {...item}
                                 onclick={this.handleClick}
                             />
                         </li>

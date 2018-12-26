@@ -3,6 +3,7 @@ import { seed } from '../seed';
 
 import NavBar from './NavBar';
 import NewProductForm from './NewProductForm';
+import CartList from './CartList'
 import ProductList from './ProductList';
 import Footer from './Footer';
 // styles
@@ -65,6 +66,9 @@ class App extends Component {
 
               <aside className="cart">
                 <h2>Cart</h2>
+                <CartList 
+                products={ this.state.products.filter( (product)=> product.hidden === true ) }
+                />
               </aside>
             </section>
             <section className="content col-lg-9">

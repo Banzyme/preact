@@ -16,7 +16,6 @@ class ProductList extends Component {
                     <ul className="list-container">
                     {  
                     this.props.products.products.map((item) => {
-                        console.log(item)
                         return <li className="list-item shadow-md" key={item.id}>
                             <Product
                                 id={item.id}

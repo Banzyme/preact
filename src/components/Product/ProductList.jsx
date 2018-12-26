@@ -21,6 +21,7 @@ class ProductList extends Component {
                             <Product
                                 {...item}
                                 onclick={ this.handleClick }
+                                onlike={ (productId) => this.props.onLike(productId) }
                             />
                         </li>
                     })

@@ -10,6 +10,7 @@ class NewProductForm extends Component{
     hidden: false,
     location: 'Jhb, SA',
     impressions: 0,
+    likes:0,
     imgPath: '../../assets/img/iphone.jpg'
   }
 

@@ -30,6 +30,22 @@ class App extends Component {
 
 
   // event handlers
+  onLike = (id) =>{
+    const newState = this.state.products.map(product => {
+      if (product.id === id) {
+        return Object.assign({}, product, {
+          likes: product.likes + 1
+        })
+      } else {
+        return product;
+      }
+    });
+    // Update state
+    this.setState({
+      products: newState
+    })
+  }
+
   handleClick = (id) => {
     // toggle hidden state when clicked
     const newState = this.state.products.map(product => {
@@ -51,36 +67,40 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <article className="header">
-        <NavBar>Preact</NavBar>
-      </article>
-        
+
+      
+        <article className="header">
+          <NavBar>Preact</NavBar>
+        </article>
+
         <article className="container-fluid">
-        <div className="row">
-              <section className="side col-lg-3">
+          <div className="row">
+            <section className="side col-lg-3">
               <h4 className="heading">Sell your product</h4>
-        
+
               <hr />
-              <NewProductForm onAddProduct={this.addNewProduct}/>
+              <NewProductForm onAddProduct={this.addNewProduct} />
 
               <div className="rounded shadow-lg">
-                <CartList 
-                products={ this.state.products.filter( (product)=> 
-                  product.hidden === true ) }
+                <CartList
+                  products={this.state.products.filter((product) =>
+                    product.hidden === true)}
                 />
               </div>
             </section>
             <section className="content col-lg-9">
               <h4 className="display-4 mb-2 ml-5">Featured</h4>
-              
-              <ProductList onclick={this.handleClick} products={this.state}/>
+
+              <ProductList onclick={this.handleClick} onLike={this.onLike} products={this.state} />
             </section>
           </div>
         </article>
-        
+
         <article className="footer">
-          <Footer/>
+          <Footer />
         </article>
+
+
       </div>
     );
   }

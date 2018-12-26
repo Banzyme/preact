@@ -7,6 +7,7 @@ export const seed =  [
         hidden: true,
         location: 'Middelburg Nasaret',
         impressions: 0,
+        likes: 0,
         imgPath: '../../assets/img/iphone.jpg'
     },
     {
@@ -17,6 +18,7 @@ export const seed =  [
         hidden: false,
         location: 'Pretoria Sunnyside',
         impressions: 0,
+        likes: 0,
         imgPath: '../../assets/img/iphone.jpg'
     }
 ]

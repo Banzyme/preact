@@ -2,7 +2,6 @@
 /*
 1. Navigation styles
 */
-
 .navbar {
     width: 100%;
     background-color: purple;
@@ -15,7 +14,6 @@ nav>span {
 /*
 2. Aside styles
 */
-
 .newProductForm {
     margin-top: 2.5em;
     padding-left: 1em;
@@ -41,7 +39,6 @@ hr {
 /*
 3. Main csontent styles
 */
-
 .container-fluid {
     min-height: 100vh;
 }
@@ -49,7 +46,6 @@ hr {
 /*
 4. Footer
 */
-
 .footer {
     text-align: center;
     width: 100%;
@@ -60,7 +56,6 @@ hr {
 /*
 Animations
 */
-
 @keyframes full-circle-rotation {
     from {
         transform: rotate(0deg);

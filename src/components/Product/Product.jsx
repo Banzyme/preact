@@ -1,6 +1,9 @@
 import React from 'react';
-import './Product.css';
 import PropTypes from 'prop-types';
+
+import './Product.css';
+import thumbnailDefault from '../../assets/img/iphone.jpg';
+
 
 function Product(props){
     
@@ -11,7 +14,7 @@ function Product(props){
                     <div className="row">
                     <div className="col-md-4" id="product-img">
                     
-                        <img src={props.imgPath} class="rounded float-left" alt="item" />
+                        <img src={thumbnailDefault} class="rounded float-left" alt="item" />
                     </div>
                     <div className="col-md-8" id="product-details">
                         <h4> {props.title} </h4>
@@ -29,8 +32,10 @@ function Product(props){
                         <br />
                         <p className="w-100 text-center"> 
     
-                        <i class="far fa-eye"></i><sup><b> {props.impressions} </b></sup>
-                        <i class="ml-4 far fa-heart"></i><sup><b>0</b></sup>
+                        <i className="far fa-eye"></i><sup><b> {props.impressions} </b></sup>
+                        <i className={props.likes===0? "ml-4 far fa-heart": "ml-4 fas fa-heart" }  
+                            onClick={ () => props.onlike(props.id) } >
+                            </i><sup><b>{props.likes}</b></sup>
                         </p>
                     </div>
                     </div>

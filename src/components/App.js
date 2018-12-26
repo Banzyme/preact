@@ -64,8 +64,8 @@ class App extends Component {
               <hr />
               <NewProductForm onAddProduct={this.addNewProduct}/>
 
-              <aside className="cart">
-                <h2>Cart</h2>
+              <aside className="cart rounded shadow-lg">
+                <h2 className="p-2">Cart</h2>
                 <CartList 
                 products={ this.state.products.filter( (product)=> product.hidden === true ) }
                 />
